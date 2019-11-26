@@ -28,9 +28,10 @@ class Sdk{
         return $res;
     }
     /**
-     * 对象 转 数组
-     * @param object $obj 对象
-     * @return array
+     * 封装数据请求接口
+     * @param string $cmd 接口名
+     * @param array $params 请求参数
+     * @param string $version 接口版本号，为空默认v1
     */
     function request($cmd='',$params='',$version='') {
         $ts=$this->curl('https://api.dianshenqi.com/time/gettime');
